@@ -15,15 +15,9 @@
 		// Get the actual Arxiv page
 		var target = window.location.href.replace('.black', '.org')
 
-		if (window.location.href == 'https://arxiv.black/') {
-			// Main page
-			console.log('asd');
-			$("#page").html('<p style="color:white"> Hope you liked it </p>')
-		}
-		else {
-			// Load Arxix page
-			$("#page").html('<object data="' + target + '">');
-		}
+		// Load Arxix page
+		$("#page").html('<object data="' + target + '">');
+
 		// Dark mode stuff
 		var cover = document.createElement("div");
 		let css = `
