@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<link href="style.css" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<div id="page"></div>
+	<script>
+
+		// Point to the actual Arxiv
+		var target = window.location.href.replace('.org', '.black')
+
+		// Load Arxix page
+		$("#page").html('<object data="' + target + '">');
+
+		// Dark mode stuff
+		var cover = document.createElement("div");
+		let css = `
+			position: fixed;
+			pointer-events: none;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			background-color: white;
+			mix-blend-mode: difference;
+			z-index: 1;
+		`
+		cover.setAttribute("style", css);
+		document.body.appendChild(cover);
+		
+	</script>
+</body>
+
+</html>
