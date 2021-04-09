@@ -12,12 +12,18 @@
 	<div id="page"></div>
 	<script>
 
-		// Point to the actual Arxiv
-		var target = window.location.href.replace('.org', '.black')
+		// Get the actual Arxiv page
+		var target = window.location.href.replace('.black', '.org')
 
-		// Load Arxix page
-		$("#page").html('<object data="' + target + '">');
-
+		if (window.location.href == 'https://arxiv.black/') {
+			// Main page
+			console.log('asd');
+			$("#page").html('<p style="color:white"> Hope you liked it </p>')
+		}
+		else {
+			// Load Arxix page
+			$("#page").html('<object data="' + target + '">');
+		}
 		// Dark mode stuff
 		var cover = document.createElement("div");
 		let css = `
@@ -33,7 +39,7 @@
 		`
 		cover.setAttribute("style", css);
 		document.body.appendChild(cover);
-		
+
 	</script>
 </body>
 
