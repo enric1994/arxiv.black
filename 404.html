@@ -3,24 +3,41 @@
 
 
 <head>
-	<link href="style.css" rel="stylesheet">
+    <!-- <link href="style.css" rel="stylesheet"> -->
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
-	<div id="page"></div>
-	<script>
 
-		// Get the actual Arxiv page
-		var target = window.location.href.replace('.black', '.org')
-		console.log(target);
-		// Load Arxix page
-		$("#page").html('<object data="' + target + '">');
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
 
-		// Dark mode stuff
-		var cover = document.createElement("div");
-		let css = `
+        div {
+            height: 99%;
+        }
+
+        object {
+            width: 100%;
+            min-height: 100%;
+        }
+    </style>
+    
+    <div id="page"></div>
+    <script>
+
+        // Get the actual Arxiv page
+        var target = window.location.href.replace('.black', '.org')
+        console.log(target);
+        // Load Arxix page
+        $("#page").html('<object data="' + target + '">');
+
+        // Dark mode stuff
+        var cover = document.createElement("div");
+        let css = `
 			position: fixed;
 			pointer-events: none;
 			top: 0;
@@ -31,10 +48,10 @@
 			mix-blend-mode: difference;
 			z-index: 1;
 		`
-		cover.setAttribute("style", css);
-		document.body.appendChild(cover);
+        cover.setAttribute("style", css);
+        document.body.appendChild(cover);
 
-	</script>
+    </script>
 </body>
 
 </html>
