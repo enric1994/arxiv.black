@@ -1,1 +1,40 @@
-<p>Apparently, Github Pages redirects here if the page doesn't exist</p>
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<link href="style.css" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<div id="page"></div>
+	<script>
+
+		// Get the actual Arxiv page
+		var target = window.location.href.replace('.black', '.org')
+		console.log(target);
+		// Load Arxix page
+		$("#page").html('<object data="' + target + '">');
+
+		// Dark mode stuff
+		var cover = document.createElement("div");
+		let css = `
+			position: fixed;
+			pointer-events: none;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			background-color: white;
+			mix-blend-mode: difference;
+			z-index: 1;
+		`
+		cover.setAttribute("style", css);
+		document.body.appendChild(cover);
+
+	</script>
+</body>
+
+</html>
