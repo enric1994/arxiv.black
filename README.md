@@ -9,3 +9,8 @@ Read papers in dark mode everywhere
 
 ## Demo:
 [https://arxiv.black/abs/1608.02395](https://arxiv.black/abs/1608.02395)
+
+## Contribute:
+[https://github.com/enric1994/arxiv.black](https://github.com/enric1994/arxiv.black)
+
+Made with 🖤 by [Enric Moreu](https://enricmor.eu)
