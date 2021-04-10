@@ -8,7 +8,7 @@ Read papers in dark mode everywhere
 
 
 ## Demo:
-[https://arxiv.black/abs/1608.02395](https://arxiv.black/abs/1608.02395)
+[https://arxiv.black/pdf/1608.02395.pdf](https://arxiv.black/pdf/1608.02395.pdf)
 
 ## Contribute:
 [https://github.com/enric1994/arxiv.black](https://github.com/enric1994/arxiv.black)
