@@ -44,7 +44,7 @@
         var target = window.location.href.replace('.black', '.org')
         console.log(target);
         // Load Arxix page
-        $("#page").html('<object data="' + target + '">');
+        $("#page").html('<object type="application/pdf" data="' + target + '">');
 
         // Dark mode stuff
         var cover = document.createElement("div");
