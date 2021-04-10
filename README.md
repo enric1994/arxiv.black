@@ -1,4 +1,3 @@
-<div style="background-color: black; color: white">
 # arxiv.black
 
 Read papers in dark mode everywhere
@@ -15,6 +14,4 @@ Read papers in dark mode everywhere
 ## Contribute:
 [https://github.com/enric1994/arxiv.black](https://github.com/enric1994/arxiv.black)
 
-Made with ❤️ by [Enric Moreu](https://enricmor.eu)
-
-</div>
+Made with 🖤 by [Enric Moreu](https://enricmor.eu)
