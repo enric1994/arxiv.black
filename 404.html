@@ -32,7 +32,7 @@
         <a target="_blank" style="font-weight: bold; text-decoration:none; color:black;" href="https://arxiv.black">
             arxiv.black
         </a>
-         by <a target="_blank" style="font-weight: bold; text-decoration:none; color:grey;" href="https://enricmor.eu">
+        by <a target="_blank" style="font-weight: bold; text-decoration:none; color:grey;" href="https://enricmor.eu">
             Enric Moreu
         </a></p>
 
@@ -41,8 +41,12 @@
     <script>
 
         // Get the actual Arxiv page
-        var target = window.location.href.replace('.black', '.org')
-        console.log(target);
+        if (window.location.href.includes('/abs')) {
+            var target = window.location.href.replace('.black', '.org').replace('/abs', '/pdf') + '.pdf'
+        } else {
+            var target = window.location.href.replace('.black', '.org')
+        }
+        
         // Load Arxix page
         $("#page").html('<object type="application/pdf" data="' + target + '">');
 
@@ -63,14 +67,14 @@
         document.body.appendChild(cover);
 
         // Not working on smartphones alert
-        window.onload=function(){
-    var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
-    if (mobile) {
-        alert("Not working on the phone sorry!");              
-    } else {
+        window.onload = function () {
+            var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+            if (mobile) {
+                alert("Not working on the phone sorry!");
+            } else {
 
-    }
-  }
+            }
+        }
 
     </script>
 </body>
