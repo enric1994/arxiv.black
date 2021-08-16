@@ -9,6 +9,10 @@ Read papers in dark mode everywhere
 
 
 ## Demo:
+
+Edit the URL of your paper `.org` --> `.black`
+
+[https://arxiv.org/pdf/1608.02395.pdf](https://arxiv.org/pdf/1608.02395.pdf) -->
 [https://arxiv.black/pdf/1608.02395.pdf](https://arxiv.black/pdf/1608.02395.pdf)
 
 ## Contribute:
